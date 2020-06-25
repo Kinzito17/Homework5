@@ -43,17 +43,17 @@ body {
   }
   
   .past {
-    background-color: #d3d3d3;
+    background-color: #8D99AE;
     color: white;
   }
   
   .present {
-    background-color: #ff6961;
+    background-color: #EF233C;
     color: white;
   }
   
   .future {
-    background-color: #77dd77;
+    background-color: #2A9D8F;
     color: white;
   }
   
