@@ -4,17 +4,11 @@ var displayMoment = document.getElementById("currentDay");
   displayMoment.innerHTML = currentDay;
 
 
-//
+
 $(document).ready(function() {
 
-var value = $(this).siblings(".description").val();
-
-var time = $(this).parent().attr("id");
-
-localStorage.setItem(time, value);
-
-
-function hourUpdater() {
+//checks each time block against current time to determin styling
+function timeUpdater() {
     var timeNow = moment().hours();
     $(".time-block").each(function(){
         var blockHour = parseInt($(this).attr("id").split("-")[1]);
@@ -32,12 +26,12 @@ function hourUpdater() {
     });
 };
 
-hourUpdater();
+timeUpdater();
 
-var interval = setInterval(hourUpdater, 15000);
+var interval = setInterval(timeUpdater, 15000);
 
 
-//button click event
+//click event that sets textarea to local storage
 $(".saveBtn").on("click", function () {
 
     var value = $(this).siblings(".description").val();
@@ -64,16 +58,3 @@ $("#hour-19 .description").val(localStorage.getItem("hour-19"));
 $("#hour-20 .description").val(localStorage.getItem("hour-20"));
 
 });
-
-// $("textarea").each(function() {
-// var name = parseInt($(this).attr("name"));
-// if (name < timeNow) {
-//     $(this).css("background-color", "#8D99AE");
-// }
-// if (name > timeNow) {
-//     $(this).css("background-color", "#2A9D8F");
-// }
-// if (name == timeNow) {
-//     $(this).css("background-color", "#EF233C");
-// }
-// });
