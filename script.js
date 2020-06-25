@@ -1,24 +1,10 @@
 //creates current day, month & date and puts it in the jumbotron
 var currentDay = moment().format("dddd, MMMM Do")
-var eDisplayMoment = document.getElementById("currentDay");
-  eDisplayMoment.innerHTML = currentDay;
+var displayMoment = document.getElementById("currentDay");
+  displayMoment.innerHTML = currentDay;
 
 
-//set variable for the textarea id
-var time8AM = ("#8AM");
-var time9AM = ("#9AM");
-var time10AM = ("#10AM");
-var time11AM = ("#11AM");
-var time12PM = ("#12PM");
-var time1PM = ("#1PM");
-var time2PM = ("#2PM");
-var time3PM = ("#3PM");
-var time4PM = ("#4PM");
-var time5PM = ("#5PM");
-var time6PM = ("#6PM");
-var time7PM = ("#7PM");
-var time8PM = ("#8PM");
-
+//
 $(document).ready(function() {
 
 var value = $(this).siblings(".description").val();
